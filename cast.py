@@ -1,0 +1,5 @@
+print(float("52"))
+print(float(52.0))
+# print(float("2.x"))
+print(float("52.0"))
+print(float(-52))
