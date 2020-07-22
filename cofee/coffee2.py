@@ -8,7 +8,13 @@ print("Write how many cups of coffee you will need:")
 cups = input()
 can = (int(int(water)/200 >= int(cups)) and (int(int(milk)/50) >= int(cups)) and (int(int(beans)/15) >= int(cups)))
 if can:
-    print("Yes, I can make that amount of coffee")
+    
+    minCups = min(int(int(water)/200),int(int(milk)/50),int(int(beans)/15))
+    if(minCups > int(cups)):
+        more = minCups - int(cups)
+        print(f"Yes, I can make that amount of coffee (and even {more} more than that)")
+    else:
+        print("Yes, I can make that amount of coffee")
 else:
     minCups = (int(int(water)/200))
     if minCups > int(int(milk)/50):
